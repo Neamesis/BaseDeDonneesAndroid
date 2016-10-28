@@ -6,14 +6,10 @@ package com.humanbooster.basededonnees;
 
 public class Contact {
 
-    // Attributs
     private Integer id;
     private String name;
     private String firstname;
     private String phone;
-
-    // Constructeurs
-
 
     public Contact() {
     }
