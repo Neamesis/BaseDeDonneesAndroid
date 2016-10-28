@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private String inputName;
     private String inputFirstname;
     private String inputPhone;
+    private Integer firstId = 1;
 
 
     @Override
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onFirstId(View view) {
         List<Contact> contacts = new ArrayList<>();
-        Contact contact = ds.getContact(1);
+        Contact contact = ds.getContact(firstId);
         contacts.add(contact);
         ContactAdapter adapter = new ContactAdapter(this, contacts);
         listView.setAdapter(adapter);

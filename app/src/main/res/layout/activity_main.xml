@@ -67,64 +67,25 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/add_contact"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="S'inscrire"
-            android:onClick="onAddContact"
-            android:textAllCaps="false"/>
+            android:layout_weight="2">
 
-        <Button
-            android:id="@+id/display"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Afficher les contacts"
-            android:onClick="onDisplayContacts"
-            android:textAllCaps="false"/>
+            <include layout="@layout/buttons" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/update"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Mettre à jour tel avec nom"
-            android:onClick="onUpdatePhoneWithName"
-            android:textAllCaps="false"/>
+            android:layout_weight="4">
+
+            <ListView
+                android:id="@+id/my_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/remove_by_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Supprimer par nom"
-            android:onClick="onRemoveByName"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/remove_last"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Supprimer le dernier"
-            android:onClick="onRemoveLast"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/first_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ID=1"
-            android:onClick="onFirstId"
-            android:textAllCaps="false"/>
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/my_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
 
 </LinearLayout>
